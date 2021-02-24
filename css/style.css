@@ -1,0 +1,193 @@
+
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  margin: 0;
+  background-color: #fcfcfc;
+  font-family: 'Roboto', sans-serif;
+}
+.shopping-cart {
+  width: 750px;
+  height: 720px;
+  margin: 80px auto;
+  background: #4d9797;
+  
+  text-align: center;
+}
+.title {
+  height: 60px;
+  border-bottom: 1px solid #E1E8EE;
+  padding: 20px 30px;
+  color: #0a0a0a;
+  font-size: 30px;
+  font-weight: 500;
+ 
+}
+.cart-total {
+  height: 40px;
+  border-bottom: 1px solid #ebeee8;
+  padding: 10px 10px;
+  color: #080808;
+  font-size: 20px;
+  font-weight: 500;
+  text-align:right;
+  }
+.item {
+  padding: 20px 30px;
+  height: 100px;
+  display: flex;
+}
+
+.item:nth-child(5) {
+  border-top:  1px solid #f7f8fa;
+  border-bottom:  1px solid #f4f6f8;
+}
+
+/* Buttons -  Delete and Like */
+.buttons {
+  position: relative;
+  padding-top: 30px;
+  margin-right: 60px;
+}
+
+.delete-btn {
+  display: inline-block;
+  cursor: pointer;
+  width: 18px;
+  height: 17px;
+  background: url("delete-icn.svg") no-repeat center;
+  margin-right: 20px;
+}
+
+.like-btn {
+  position: absolute;
+  top: 9px;
+  left: 15px;
+  display: inline-block;
+  background: url('twitter-heart.png');
+  width: 60px;
+  height: 60px;
+  background-size: 2900%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.is-active {
+  animation-name: animate;
+  animation-duration: .8s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(28);
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+  0%   { background-position: left;  }
+  50%  { background-position: right; }
+  100% { background-position: right; }
+}
+
+/* Product Image */
+.image {
+  margin-right: 100px;
+  width:50px
+  
+}
+
+/* Product Description */
+.description {
+  padding-top: 10px;
+  margin-right: 60px;
+  width: 115px;
+}
+
+.description span {
+  display: block;
+  font-size: 14px;
+  color: #e9eef3;
+  font-weight: 400;
+}
+
+.description span:first-child {
+  margin-bottom: 5px;
+}
+.description span:last-child {
+  font-weight: 300;
+  margin-top: 8px;
+  color: #0b0c0c;
+}
+/* Product Quantity */
+.quantity {
+  padding-top: 20px;
+  margin-right: 60px;
+}
+.product_quantity {
+  -webkit-appearance: none;
+  border: none;
+  text-align: center;
+  width: 32px;
+  font-size: 16px;
+  color: #121314;
+  font-weight: 300;
+}
+
+button[class*=btn] {
+  width: 30px;
+  height: 30px;
+  background-color: #E1E8EE;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.minus-btn img {
+  margin-bottom: 3px;
+}
+.plus-btn img {
+  margin-top: 2px;
+}
+button:focus,
+input:focus {
+  outline:0;
+}
+
+/* Total Price */
+.total-price {
+  width: 83px;
+  padding-top: 27px;
+  text-align: center;
+  font-size: 16px;
+  color: #0c0c0c;
+  font-weight: 300;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .shopping-cart {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .item {
+    height:50%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .image img {
+    width: 50%;
+    height:50%
+
+  }
+  .image,
+  .quantity,
+  .description {
+    width: 50%;
+    text-align: center;
+    margin: 9px 0;
+  }
+  .buttons {
+    margin-right: 20px;
+  }
+}
